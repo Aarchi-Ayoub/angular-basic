@@ -7,3 +7,22 @@
   <span>{{ item.name }}</span>
   <span>{{ item.price | currency }}</span>
 </div>
+
+<!-- 
+  --formGroup property binding to bind checkForm 
+  --ngSubmit event binding to listen for the form submission 
+-->
+<form [formGroup]="checkForm" (ngSubmit)="onSubmit()">
+  <!--  formControlName attribute that binds to the checkoutForm -->
+
+  <div>
+    <label for="name"> Name </label>
+    <input id="name" formControlName="name" type="text" />
+  </div>
+
+  <div>
+    <label for="adress"> Address </label>
+    <input id="adress" formControlName="adress" type="text" />
+  </div>
+  <button class="button" type="submit">Purchase</button>
+</form>
